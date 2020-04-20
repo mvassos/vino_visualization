@@ -41,11 +41,19 @@ def upload_data():
     # print(df)
 
 
-def get_data():
+def get_all_data():
     conn = sql.connect(DB_NAME)
     c = conn.cursor()
 
     df = pd.read_sql_query('SELECT * FROM REVIEWS;', conn)
+    return df
+
+
+def get_price_points():
+    conn = sql.connect(DB_NAME)
+    c = conn.cursor()
+
+    df = pd.read_sql_query('SELECT price, points FROM REVIEWS;', conn)
     return df
 
 
