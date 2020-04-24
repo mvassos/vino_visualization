@@ -6,6 +6,7 @@ DATA_FILE = 'winemag-data-130k-v2.csv'
 COLS = '''id, country, description, designation, points, price, province, region_1, region_2,
         taster_name, taster_twitter_handle, title, variety, winery'''
 
+
 def create_db():
     conn = sql.connect(DB_NAME)
     c = conn.cursor()
